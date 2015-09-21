@@ -1,0 +1,262 @@
+python-pycurl 0 7.19.0 8.el6 x86_64 [] i installed
+python-urlgrabber 0 3.9.1 9.el6 noarch [] i installed
+rcs 0 5.7 37.el6 x86_64 [] i installed
+readline 0 6.0 4.el6 x86_64 [] i installed
+redhat-logos 0 60.0.14 12.el6.centos noarch [] i installed
+redhat-rpm-config 0 9.0.3 44.el6.centos noarch [] i installed
+rootfiles 0 8.1 6.1.el6 noarch [] i installed
+rpcbind 0 0.2.0 11.el6 x86_64 [] i installed
+rpm 0 4.8.0 47.el6 x86_64 [] i installed
+rpm-build 0 4.8.0 47.el6 x86_64 [] i installed
+rpm-libs 0 4.8.0 47.el6 x86_64 [] i installed
+rpm-python 0 4.8.0 47.el6 x86_64 [] i installed
+rsync 0 3.0.6 12.el6 x86_64 [] i installed
+rsyslog 0 5.8.10 10.el6_6 x86_64 [] i installed
+sed 0 4.2.1 10.el6 x86_64 [] i installed
+selinux-policy 0 3.7.19 279.el6_7.5 noarch [] i installed
+selinux-policy-targeted 0 3.7.19 279.el6_7.5 noarch [] i installed
+setup 0 2.8.14 20.el6_4.1 noarch [] i installed
+shadow-utils 2 4.1.4.2 19.el6_6.1 x86_64 [] i installed
+shared-mime-info 0 0.70 6.el6 x86_64 [] i installed
+slang 0 2.2.1 1.el6 x86_64 [] i installed
+sqlite 0 3.6.20 1.el6_7.2 x86_64 [] i installed
+subversion 0 1.6.11 15.el6_7 x86_64 [] i installed
+sudo 0 1.8.6p3 20.el6_7 x86_64 [] i installed
+swig 0 1.3.40 6.el6 x86_64 [] i installed
+system-config-firewall-base 0 1.2.27 7.2.el6_6 noarch [] i installed
+sysvinit-tools 0 2.87 6.dsf.el6 x86_64 [] i installed
+tar 2 1.23 13.el6 x86_64 [] i installed
+tcp_wrappers-libs 0 7.6 57.el6 x86_64 [] i installed
+tzdata 0 2015f 1.el6 noarch [] i installed
+udev 0 147 2.63.el6 x86_64 [] i installed
+unzip 0 6.0 2.el6_6 x86_64 [] i installed
+upstart 0 0.6.5 13.el6_5.3 x86_64 [] i installed
+ustr 0 1.0.4 9.1.el6 x86_64 [] i installed
+util-linux-ng 0 2.17.2 12.18.el6 x86_64 [] i installed
+vim-minimal 2 7.4.629 5.el6 x86_64 [] i installed
+wget 0 1.12 5.el6_6.1 x86_64 [] i installed
+which 0 2.19 6.el6 x86_64 [] i installed
+xfsprogs 0 3.1.1 16.el6 x86_64 [] i installed
+xz 0 4.999.9 0.5.beta.20091007git.el6 x86_64 [] i installed
+xz-libs 0 4.999.9 0.5.beta.20091007git.el6 x86_64 [] i installed
+xz-lzma-compat 0 4.999.9 0.5.beta.20091007git.el6 x86_64 [] i installed
+yum 0 3.2.29 69.el6.centos noarch [] i installed
+yum-metadata-parser 0 1.1.2 16.el6 x86_64 [] i installed
+yum-plugin-fastestmirror 0 1.1.30 30.el6 noarch [] i installed
+yum-plugin-versionlock 0 1.1.30 30.el6 noarch [] i installed
+yum-utils 0 1.1.30 30.el6 noarch [] i installed
+zlib 0 1.2.3 29.el6 x86_64 [] i installed
+[2015-09-21T10:50:38+00:00] DEBUG: yum_package[iptables] checking yum info for iptables
+[2015-09-21T10:50:38+00:00] DEBUG: yum_package[iptables] installed version: ["1.4.7-16.el6"] candidate version: 1.4.7-16.el6
+[2015-09-21T10:50:38+00:00] DEBUG: yum_package[iptables] iptables 1.4.7-16.el6 already installed
+[2015-09-21T10:50:38+00:00] DEBUG: yum_package[iptables] is already installed - nothing to do
+ (up to date)
+  * execute[rebuild-iptables] action nothing[2015-09-21T10:50:38+00:00] INFO: Processing execute[rebuild-iptables] action nothing (iptables::default line 26)
+ (skipped due to action :nothing)
+[2015-09-21T10:50:38+00:00] DEBUG: Skipping execute[rebuild-iptables] due to action :nothing
+  * directory[/etc/iptables.d] action create[2015-09-21T10:50:38+00:00] INFO: Processing directory[/etc/iptables.d] action create (iptables::default line 31)
+[2015-09-21T10:50:38+00:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2015-09-21T10:50:38+00:00] DEBUG: Provider for action create on resource directory[/etc/iptables.d] is Chef::Provider::Directory
+[2015-09-21T10:50:38+00:00] INFO: directory[/etc/iptables.d] created directory /etc/iptables.d
+
+    - create new directory /etc/iptables.d[2015-09-21T10:50:38+00:00] DEBUG: found target_mode == nil, so no mode was specified on resource, not managing mode
+[2015-09-21T10:50:38+00:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-09-21T10:50:38+00:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-09-21T10:50:38+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+
+  * template[/usr/sbin/rebuild-iptables] action create[2015-09-21T10:50:38+00:00] INFO: Processing template[/usr/sbin/rebuild-iptables] action create (iptables::default line 35)
+[2015-09-21T10:50:38+00:00] DEBUG: Providers for generic template resource enabled on node include: [Chef::Provider::Template]
+[2015-09-21T10:50:38+00:00] DEBUG: Provider for action create on resource template[/usr/sbin/rebuild-iptables] is Chef::Provider::Template
+[2015-09-21T10:50:38+00:00] DEBUG: touching /usr/sbin/rebuild-iptables to create it
+[2015-09-21T10:50:38+00:00] INFO: template[/usr/sbin/rebuild-iptables] created file /usr/sbin/rebuild-iptables
+
+    - create new file /usr/sbin/rebuild-iptables[2015-09-21T10:50:38+00:00] DEBUG: calculating checksum of /tmp/chef-rendered-template20150921-17578-1m281hq to compare with
+[2015-09-21T10:50:38+00:00] DEBUG: running: diff -u /usr/sbin/rebuild-iptables /tmp/chef-rendered-template20150921-17578-1m281hq
+[2015-09-21T10:50:38+00:00] DEBUG: reading modes from /usr/sbin/rebuild-iptables file
+[2015-09-21T10:50:38+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/chef-rendered-template20150921-17578-1m281hq
+[2015-09-21T10:50:38+00:00] DEBUG: moving temporary file /tmp/chef-rendered-template20150921-17578-1m281hq into place at /usr/sbin/rebuild-iptables
+[2015-09-21T10:50:38+00:00] INFO: template[/usr/sbin/rebuild-iptables] updated file contents /usr/sbin/rebuild-iptables
+
+    - update content in file /usr/sbin/rebuild-iptables from none to 09a0f5
+    --- /usr/sbin/rebuild-iptables      2015-09-21 10:50:38.306878376 +0000
+    +++ /tmp/chef-rendered-template20150921-17578-1m281hq       2015-09-21 10:50:38.304878377 +0000
+    @@ -1 +1,147 @@
+    +#!/opt/chef/embedded/bin/ruby -w
+    +
+    +#
+    +# rebuild-iptables.rb -- Construct an iptables rules file from fragments.
+    +#
+    +# Written by Phil Cohen <github@phlippers.net>
+    +# Copyright 2011, Phil Cohen
+    +#
+    +# Constructs an iptables rules file from the prefix, standard, and suffix
+    +# files in the iptables configuration area, adding any additional modules
+    +# specified in the command line, and prints the resulting iptables rules to
+    +# standard output (suitable for saving into /var/lib/iptables or some other
+    +# appropriate location on the system).
+    +
+    +##############################################################################
+    +# Modules and declarations
+    +##############################################################################
+    +
+    +# Path to the iptables template area.
+    +TEMPLATE_PATH = "/etc/iptables.d"
+    +
+    +##############################################################################
+    +# Installation
+    +##############################################################################
+    +
+    +# Read in a file, processing includes as required.
+    +def read_iptables(file, table = :filter)
+    +  file = File.join(TEMPLATE_PATH, file) unless File.dirname(file) =~ /iptables\.d/
+    +  rule = File.readlines(file).map{ |line| line.chomp }
+    +  rule.each do |line|
+    +    if line =~ /^\s*include\s+(\S+)$/
+    +      read_iptables($1, table)
+    +    elsif line =~ /^\s*\*([a-z]+)\s*$/
+    +      table = $1.to_sym
+    +    elsif line =~ /^\s*:([-a-zA-Z0-9_]+)(?:\s+([A-Z]+(?:\s*\[.*?\])))?$/
+    +      @data[table][:chains][$1] = $2 || '-'
+    +    elsif line !~ /^\s*COMMIT\s*$/
+    +      #detect new chains
+    +      if chain = line.match(/\-[ADRILFZN]\s+([-a-zA-Z0-9_]+)\s/)
+    +        @data[table][:chains][chain[1]] ||= '-'
+    +      end
+    +      @data[table][:rules].push line
+    +    end
+    +  end
+    +end
+    +
+    +# Write a file carefully.
+    +def write_iptables(file, data)
+    +  File.open("#{file}.new", "w") { |f| f.write(data) }
+    +  File.rename("#{file}.new", file)
+    +end
+    +
+    +# Install iptables on a Red Hat system. Takes the new iptables data.
+    +def install_redhat(data)
+    +  write_iptables("/etc/sysconfig/iptables", data)
+    +  system("/sbin/service", "iptables", "restart")
+    +end
+    +
+    +# Install iptables on a Debian system. Takes the new iptables data.
+    +def install_debian(data)
+    +  Dir.mkdir("/etc/iptables") unless File.directory?("/etc/iptables")
+    +  write_iptables("/etc/iptables/general", data)
+    +  system("/sbin/iptables-restore < /etc/iptables/general")
+    +end
+    +
+    +##############################################################################
+    +# Main routine
+    +##############################################################################
+    +
+    +@data = {
+    +    :filter => {
+    +        :chains => {
+    +            'INPUT'   => 'ACCEPT [0,0]',
+    +            'FORWARD' => 'ACCEPT [0,0]',
+    +            'OUTPUT'  => 'ACCEPT [0,0]'
+    +        },
+    +        :rules => []
+    +    },
+    +    :mangle => {
+    +        :chains => {
+    +            'PREROUTING'  => 'ACCEPT [0,0]',
+    +            'INPUT'       => 'ACCEPT [0,0]',
+    +            'FORWARD'     => 'ACCEPT [0,0]',
+    +            'OUTPUT'      => 'ACCEPT [0,0]',
+    +            'POSTROUTING' => 'ACCEPT [0,0]'
+    +        },
+    +        :rules => []
+    +    },
+    +    :nat => {
+    +        :chains => {
+    +            'PREROUTING'  => 'ACCEPT [0,0]',
+    +            'POSTROUTING' => 'ACCEPT [0,0]',
+    +            'OUTPUT'      => 'ACCEPT [0,0]'
+    +        },
+    +        :rules => [],
+    +    },
+    +    :raw => {
+    +        :chains => {
+    +            'PREROUTING'  => 'ACCEPT [0,0]',
+    +            'OUTPUT'      => 'ACCEPT [0,0]'
+    +        },
+    +        :rules => [],
+    +    },
+    +    :security => {
+    +        :chains => {
+    +            'INPUT'   => 'ACCEPT [0,0]',
+    +            'FORWARD' => 'ACCEPT [0,0]',
+    +            'OUTPUT'  => 'ACCEPT [0,0]'
+    +        },
+    +        :rules => []
+    +    }
+    +}
+    +
+    +templates = Dir["#{TEMPLATE_PATH}/*"].sort.delete_if do |template|
+    +  %w[prefix suffix postfix].include?(File.basename(template))
+    +end
+    +
+    +templates.unshift 'prefix' if File.exist? "#{TEMPLATE_PATH}/prefix"
+    +templates.push 'suffix' if File.exist? "#{TEMPLATE_PATH}/suffix"
+    +templates.push 'postfix' if File.exist? "#{TEMPLATE_PATH}/postfix"
+    +
+    +templates.each { |template| read_iptables(template) }
+    +
+    +iptables_rules = ""
+    +@data.each do |table, table_data|
+    +  if table_data[:rules].any?
+    +    iptables_rules << "*#{table.to_s}\n"
+    +    table_data[:chains].each do |chain, rule|
+    +      iptables_rules << ":#{chain} #{rule}\n"
+    +    end
+    +    iptables_rules << table_data[:rules].join("\n")
+    +    iptables_rules << "\nCOMMIT\n"
+    +  end
+    +end
+    +
+    +if File.exist?("/etc/debian_version")
+    +  install_debian(iptables_rules)
+    +elsif File.exist?("/etc/redhat-release")
+    +  install_redhat(iptables_rules)
+    +elsif File.exist?("/etc/system-release") # Amazon Linux
+    +  install_redhat(iptables_rules)
+    +else
+    +  raise "#{$0}: cannot figure out whether this is Red Hat or Debian\n";
+    +end
+    +
+    +exit 0[2015-09-21T10:50:38+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-21T10:50:38+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-21T10:50:38+00:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-09-21T10:50:38+00:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-09-21T10:50:38+00:00] DEBUG: found target_uid == nil, so no owner was specified on resource, not managing owner
+[2015-09-21T10:50:38+00:00] DEBUG: found target_gid == nil, so no group was specified on resource, not managing group
+[2015-09-21T10:50:38+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-21T10:50:38+00:00] INFO: template[/usr/sbin/rebuild-iptables] mode changed to 755
+
+    - change mode from '' to '0755'[2015-09-21T10:50:38+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+
+[2015-09-21T10:50:38+00:00] INFO: template[nginx.conf] sending reload action to service[nginx] (delayed)
+Recipe: nginx::default
+  * service[nginx] action reload[2015-09-21T10:50:38+00:00] INFO: Processing service[nginx] action reload (nginx::default line 24)
+[2015-09-21T10:50:38+00:00] DEBUG: Providers for generic service resource enabled on node include: [Chef::Provider::Service::Redhat, Chef::Provider::Service::Init]
+[2015-09-21T10:50:38+00:00] DEBUG: Provider for action reload on resource service[nginx] is Chef::Provider::Service::Redhat
+[2015-09-21T10:50:38+00:00] DEBUG: service[nginx] supports status, running
+nginx (pid  18104) is running...
+[2015-09-21T10:50:38+00:00] DEBUG: service[nginx] is running
+nginx           0:off   1:off   2:on    3:on    4:on    5:on    6:off
+Reloading nginx: [  OK  ]
+[2015-09-21T10:50:38+00:00] INFO: service[nginx] reloaded
+
+    - reload service service[nginx]
+[2015-09-21T10:50:38+00:00] INFO: Chef Run complete in 141.711937582 seconds
+[2015-09-21T10:50:38+00:00] INFO: Skipping removal of unused files from the cache
+
+Running handlers:
+[2015-09-21T10:50:38+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-21T10:50:38+00:00] INFO: Report handlers complete
+Chef Client finished, 25/29 resources updated in 143.500340754 seconds
+[2015-09-21T10:50:38+00:00] DEBUG: Forked instance successfully reaped (pid: 17578)
+[2015-09-21T10:50:38+00:00] DEBUG: Exiting
