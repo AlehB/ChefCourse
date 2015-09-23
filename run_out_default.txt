@@ -1,0 +1,153 @@
+[root@Chef ~]# chef-solo -c /root/.chef/solo.rb
+[2015-09-23T09:44:10+00:00] INFO: Forking chef instance to converge...
+[2015-09-23T09:44:10+00:00] DEBUG: Fork successful. Waiting for new chef pid: 18623
+[2015-09-23T09:44:10+00:00] DEBUG: Forked instance now converging
+Starting Chef Client, version 12.4.1
+[2015-09-23T09:44:15+00:00] INFO: *** Chef 12.4.1 ***
+[2015-09-23T09:44:15+00:00] INFO: Chef-client pid: 18623
+[2015-09-23T09:44:15+00:00] DEBUG: Chef-client request_id: 0e1182e3-ab25-4345-8c42-6b4d0f29f37b
+[2015-09-23T09:44:17+00:00] DEBUG: Building node object for Chef
+[2015-09-23T09:44:17+00:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2015-09-23T09:44:17+00:00] INFO: Setting the run_list to ["recipe[jboss]"] from CLI options
+[2015-09-23T09:44:17+00:00] DEBUG: Applying attributes from json file
+[2015-09-23T09:44:17+00:00] DEBUG: Platform is centos version 6.5
+[2015-09-23T09:44:17+00:00] INFO: Run List is [recipe[jboss]]
+[2015-09-23T09:44:17+00:00] INFO: Run List expands to [jboss]
+[2015-09-23T09:44:17+00:00] INFO: Starting Chef Run for Chef
+[2015-09-23T09:44:17+00:00] INFO: Running start handlers
+[2015-09-23T09:44:17+00:00] INFO: Start handlers complete.
+[2015-09-23T09:44:17+00:00] DEBUG: No chefignore file found at /root/chefignore no files will be ignored
+Compiling Cookbooks...
+[2015-09-23T09:44:18+00:00] DEBUG: Cookbooks to compile: [:java, :jboss]
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's library file: /root/chef_cookbooks/java/libraries/helpers.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's library file: /root/chef_cookbooks/java/libraries/matchers.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Node Chef loading cookbook java's attribute file /root/chef_cookbooks/java/attributes/default.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loading Attribute java::default
+[2015-09-23T09:44:18+00:00] DEBUG: Node Chef loading cookbook jboss's attribute file /root/chef_cookbooks/jboss/attributes/default.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loading Attribute jboss::default
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's providers from /root/chef_cookbooks/java/providers/alternatives.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/providers/alternatives.rb into provider java_alternatives (LWRP provider java_alternatives from cookbook java)
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's providers from /root/chef_cookbooks/java/providers/ark.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/providers/ark.rb into provider java_ark (LWRP provider java_ark from cookbook java)
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's resources from /root/chef_cookbooks/java/resources/alternatives.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/resources/alternatives.rb into resource java_alternatives (LWRP resource java_alternatives from cookbook java)
+[2015-09-23T09:44:18+00:00] DEBUG: Loading cookbook java's resources from /root/chef_cookbooks/java/resources/ark.rb
+[2015-09-23T09:44:18+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/resources/ark.rb into resource java_ark (LWRP resource java_ark from cookbook java)
+[2015-09-23T09:44:18+00:00] DEBUG: Loading Recipe jboss via include_recipe
+[2015-09-23T09:44:18+00:00] DEBUG: Found recipe default in cookbook jboss
+[2015-09-23T09:44:18+00:00] DEBUG: Resources for generic user resource enabled on node include: [Chef::Resource::User]
+[2015-09-23T09:44:18+00:00] DEBUG: Resource for user is Chef::Resource::User
+[2015-09-23T09:44:18+00:00] DEBUG: Resources for generic cookbook_file resource enabled on node include: [Chef::Resource::CookbookFile]
+[2015-09-23T09:44:18+00:00] DEBUG: Resource for cookbook_file is Chef::Resource::CookbookFile
+[2015-09-23T09:44:18+00:00] DEBUG: Resources for generic directory resource enabled on node include: [Chef::Resource::Directory]
+[2015-09-23T09:44:18+00:00] DEBUG: Resource for directory is Chef::Resource::Directory
+[2015-09-23T09:44:18+00:00] DEBUG: Resources for generic execute resource enabled on node include: [Chef::Resource::Execute]
+[2015-09-23T09:44:18+00:00] DEBUG: Resource for execute is Chef::Resource::Execute
+[2015-09-23T09:44:18+00:00] DEBUG: Resources for generic cookbook_file resource enabled on node include: [Chef::Resource::CookbookFile]
+[2015-09-23T09:44:18+00:00] DEBUG: Resource for cookbook_file is Chef::Resource::CookbookFile
+[2015-09-23T09:44:18+00:00] DEBUG: Loading from cookbook_path: /root/chef_cookbooks
+Converging 5 resources
+[2015-09-23T09:44:18+00:00] DEBUG: Converging node Chef
+Recipe: jboss::default
+  * user[jboss] action create[2015-09-23T09:44:18+00:00] INFO: Processing user[jboss] action create (jboss::default line 13)
+[2015-09-23T09:44:18+00:00] DEBUG: Providers for generic user resource enabled on node include: [Chef::Provider::User::Useradd]
+[2015-09-23T09:44:18+00:00] DEBUG: Provider for action create on resource user[jboss] is Chef::Provider::User::Useradd
+ (up to date)
+  * cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] action create[2015-09-23T09:44:18+00:00] INFO: Processing cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] action create (jboss::default line 21)
+[2015-09-23T09:44:18+00:00] DEBUG: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] staging /root/chef_cookbooks/jboss/files/default/jboss-as-7.1.1.Final.tar.gz to /opt/.jboss-as-7.1.1.Final.tar.gz20150923-18623-18poy3p
+[2015-09-23T09:44:18+00:00] DEBUG: touching /opt/jboss-as-7.1.1.Final.tar.gz to create it
+[2015-09-23T09:44:18+00:00] INFO: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] created file /opt/jboss-as-7.1.1.Final.tar.gz
+
+    - create new file /opt/jboss-as-7.1.1.Final.tar.gz[2015-09-23T09:44:18+00:00] DEBUG: calculating checksum of /opt/.jboss-as-7.1.1.Final.tar.gz20150923-18623-18poy3p to compare with
+[2015-09-23T09:44:19+00:00] DEBUG: reading modes from /opt/jboss-as-7.1.1.Final.tar.gz file
+[2015-09-23T09:44:19+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /opt/.jboss-as-7.1.1.Final.tar.gz20150923-18623-18poy3p
+[2015-09-23T09:44:19+00:00] DEBUG: moving temporary file /opt/.jboss-as-7.1.1.Final.tar.gz20150923-18623-18poy3p into place at /opt/jboss-as-7.1.1.Final.tar.gz
+[2015-09-23T09:44:26+00:00] INFO: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] updated file contents /opt/jboss-as-7.1.1.Final.tar.gz
+
+    - update content in file /opt/jboss-as-7.1.1.Final.tar.gz from none to 88fd3f
+    (file sizes exceed 10000000 bytes, diff output suppressed)[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:27+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:27+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:27+00:00] INFO: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] owner changed to 0
+[2015-09-23T09:44:27+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:27+00:00] INFO: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] group changed to 0
+[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] INFO: cookbook_file[/opt/jboss-as-7.1.1.Final.tar.gz] mode changed to 644
+
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'[2015-09-23T09:44:27+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+
+  * directory[/opt/jbossas7] action create[2015-09-23T09:44:27+00:00] INFO: Processing directory[/opt/jbossas7] action create (jboss::default line 29)
+[2015-09-23T09:44:27+00:00] DEBUG: Providers for generic directory resource enabled on node include: [Chef::Provider::Directory]
+[2015-09-23T09:44:27+00:00] DEBUG: Provider for action create on resource directory[/opt/jbossas7] is Chef::Provider::Directory
+[2015-09-23T09:44:27+00:00] INFO: directory[/opt/jbossas7] created directory /opt/jbossas7
+
+    - create new directory /opt/jbossas7[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:27+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:27+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:27+00:00] INFO: directory[/opt/jbossas7] owner changed to 501
+[2015-09-23T09:44:27+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:27+00:00] INFO: directory[/opt/jbossas7] group changed to 501
+[2015-09-23T09:44:27+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:27+00:00] INFO: directory[/opt/jbossas7] mode changed to 755
+
+    - change mode from '' to '0755'
+    - change owner from '' to 'jboss'
+    - change group from '' to 'jboss'[2015-09-23T09:44:27+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+
+  * execute[untar-jboss] action run[2015-09-23T09:44:27+00:00] INFO: Processing execute[untar-jboss] action run (jboss::default line 36)
+[2015-09-23T09:44:27+00:00] DEBUG: Providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-09-23T09:44:27+00:00] DEBUG: Provider for action run on resource execute[untar-jboss] is Chef::Provider::Execute
+[2015-09-23T09:44:30+00:00] INFO: execute[untar-jboss] ran successfully
+
+    - execute tar -xzf jboss-as-7.1.1.Final.tar.gz;chown -R jboss.jboss jbossas7
+  * cookbook_file[/etc/init.d/jbossas7] action create[2015-09-23T09:44:30+00:00] INFO: Processing cookbook_file[/etc/init.d/jbossas7] action create (jboss::default line 42)
+[2015-09-23T09:44:30+00:00] DEBUG: cookbook_file[/etc/init.d/jbossas7] staging /root/chef_cookbooks/jboss/files/default/jbossas7 to /etc/init.d/.jbossas720150923-18623-1b73bxe
+[2015-09-23T09:44:30+00:00] DEBUG: touching /etc/init.d/jbossas7 to create it
+[2015-09-23T09:44:30+00:00] INFO: cookbook_file[/etc/init.d/jbossas7] created file /etc/init.d/jbossas7
+
+    - create new file /etc/init.d/jbossas7[2015-09-23T09:44:30+00:00] DEBUG: calculating checksum of /etc/init.d/.jbossas720150923-18623-1b73bxe to compare with
+[2015-09-23T09:44:30+00:00] DEBUG: reading modes from /etc/rc.d/init.d/jbossas7 file
+[2015-09-23T09:44:30+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /etc/init.d/.jbossas720150923-18623-1b73bxe
+[2015-09-23T09:44:30+00:00] DEBUG: moving temporary file /etc/init.d/.jbossas720150923-18623-1b73bxe into place at /etc/rc.d/init.d/jbossas7
+[2015-09-23T09:44:30+00:00] INFO: cookbook_file[/etc/init.d/jbossas7] updated file contents /etc/init.d/jbossas7
+
+    - update content in file /etc/init.d/jbossas7 from none to 2c804f
+    (new content is binary, diff output suppressed)[2015-09-23T09:44:30+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:30+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:30+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:30+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:30+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T09:44:30+00:00] INFO: cookbook_file[/etc/init.d/jbossas7] owner changed to 0
+[2015-09-23T09:44:30+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T09:44:30+00:00] INFO: cookbook_file[/etc/init.d/jbossas7] group changed to 0
+[2015-09-23T09:44:30+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T09:44:30+00:00] INFO: cookbook_file[/etc/init.d/jbossas7] mode changed to 755
+
+    - change mode from '' to '0755'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'[2015-09-23T09:44:30+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+  * execute[scriptexectuable] action run[2015-09-23T10:06:47+00:00] INFO: Processing execute[scriptexectuable] action run (jboss::default line 64)
+[2015-09-23T09:44:30+00:00] DEBUG: Providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-09-23T09:44:30+00:00] DEBUG: Provider for action run on resource execute[scriptexectuable] is Chef::Provider::Execute
+[2015-09-23T09:44:30+00:00] INFO: execute[scriptexectuable] ran successfully
+
+    - execute chmod +x /etc/rc.d/init.d/jbossas7
+[2015-09-23T09:44:30+00:00] INFO: Chef Run complete in 5.161133136 seconds
+[2015-09-23T09:44:30+00:00] INFO: Skipping removal of unused files from the cache
+
+[2015-09-23T09:44:30+00:00] INFO: Chef Run complete in 12.46209705 seconds
+[2015-09-23T09:44:30+00:00] INFO: Skipping removal of unused files from the cache
+
+Running handlers:
+[2015-09-23T09:44:30+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-23T09:44:30+00:00] INFO: Report handlers complete
+Chef Client finished, 4/5 resources updated in 20.144885093 seconds
+[2015-09-23T09:44:30+00:00] DEBUG: Forked instance successfully reaped (pid: 18623)
+[2015-09-23T09:44:30+00:00] DEBUG: Exiting
