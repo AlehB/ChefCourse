@@ -1,0 +1,150 @@
+[root@Chef deployments]# chef-solo -c /root/.chef/solo.rb
+[2015-09-23T11:22:35+00:00] INFO: Forking chef instance to converge...
+[2015-09-23T11:22:35+00:00] DEBUG: Fork successful. Waiting for new chef pid: 21637
+[2015-09-23T11:22:35+00:00] DEBUG: Forked instance now converging
+Starting Chef Client, version 12.4.1
+[2015-09-23T11:22:35+00:00] INFO: *** Chef 12.4.1 ***
+[2015-09-23T11:22:35+00:00] INFO: Chef-client pid: 21637
+[2015-09-23T11:22:35+00:00] DEBUG: Chef-client request_id: 114dcaf9-cebd-499b-adde-8dd084823fc0
+[2015-09-23T11:22:37+00:00] DEBUG: Building node object for Chef
+[2015-09-23T11:22:37+00:00] DEBUG: Extracting run list from JSON attributes provided on command line
+[2015-09-23T11:22:37+00:00] INFO: Setting the run_list to ["recipe[jboss::deploy]"] from CLI options
+[2015-09-23T11:22:37+00:00] DEBUG: Applying attributes from json file
+[2015-09-23T11:22:37+00:00] DEBUG: Platform is centos version 6.5
+[2015-09-23T11:22:37+00:00] INFO: Run List is [recipe[jboss::deploy]]
+[2015-09-23T11:22:37+00:00] INFO: Run List expands to [jboss::deploy]
+[2015-09-23T11:22:37+00:00] INFO: Starting Chef Run for Chef
+[2015-09-23T11:22:37+00:00] INFO: Running start handlers
+[2015-09-23T11:22:37+00:00] INFO: Start handlers complete.
+[2015-09-23T11:22:37+00:00] DEBUG: No chefignore file found at /root/chefignore no files will be ignored
+Compiling Cookbooks...
+[2015-09-23T11:22:37+00:00] DEBUG: Cookbooks to compile: [:java, :jboss]
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's library file: /root/chef_cookbooks/java/libraries/helpers.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's library file: /root/chef_cookbooks/java/libraries/matchers.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Node Chef loading cookbook java's attribute file /root/chef_cookbooks/java/attributes/default.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loading Attribute java::default
+[2015-09-23T11:22:37+00:00] DEBUG: Node Chef loading cookbook jboss's attribute file /root/chef_cookbooks/jboss/attributes/default.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loading Attribute jboss::default
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's providers from /root/chef_cookbooks/java/providers/alternatives.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/providers/alternatives.rb into provider java_alternatives (LWRP provider java_alternatives from cookbook java)
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's providers from /root/chef_cookbooks/java/providers/ark.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/providers/ark.rb into provider java_ark (LWRP provider java_ark from cookbook java)
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's resources from /root/chef_cookbooks/java/resources/alternatives.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/resources/alternatives.rb into resource java_alternatives (LWRP resource java_alternatives from cookbook java)
+[2015-09-23T11:22:37+00:00] DEBUG: Loading cookbook java's resources from /root/chef_cookbooks/java/resources/ark.rb
+[2015-09-23T11:22:37+00:00] DEBUG: Loaded contents of /root/chef_cookbooks/java/resources/ark.rb into resource java_ark (LWRP resource java_ark from cookbook java)
+[2015-09-23T11:22:37+00:00] DEBUG: Loading Recipe jboss::deploy via include_recipe
+[2015-09-23T11:22:37+00:00] DEBUG: Found recipe deploy in cookbook jboss
+[2015-09-23T11:22:37+00:00] DEBUG: Resources for generic remote_file resource enabled on node include: [Chef::Resource::RemoteFile]
+[2015-09-23T11:22:37+00:00] DEBUG: Resource for remote_file is Chef::Resource::RemoteFile
+[2015-09-23T11:22:37+00:00] DEBUG: Resources for generic execute resource enabled on node include: [Chef::Resource::Execute]
+[2015-09-23T11:22:37+00:00] DEBUG: Resource for execute is Chef::Resource::Execute
+[2015-09-23T11:22:37+00:00] DEBUG: Resources for generic service resource enabled on node include: [Chef::Resource::Service]
+[2015-09-23T11:22:37+00:00] DEBUG: Resource for service is Chef::Resource::Service
+[2015-09-23T11:22:37+00:00] DEBUG: Resources for generic service resource enabled on node include: [Chef::Resource::Service]
+[2015-09-23T11:22:37+00:00] DEBUG: Resource for service is Chef::Resource::Service
+[2015-09-23T11:22:37+00:00] DEBUG: ivars which did not match with the prior resource: []
+[2015-09-23T11:22:37+00:00] DEBUG: ivars which did not match with the prior resource: [:@action]
+[2015-09-23T11:22:37+00:00] WARN: Cloning resource attributes for service[jbossas7] from prior resource (CHEF-3694)
+[2015-09-23T11:22:37+00:00] WARN: Previous service[jbossas7]: /root/chef_cookbooks/jboss/recipes/deploy.rb:25:in `from_file'
+[2015-09-23T11:22:37+00:00] WARN: Current  service[jbossas7]: /root/chef_cookbooks/jboss/recipes/deploy.rb:29:in `from_file'
+[2015-09-23T11:22:37+00:00] DEBUG: Loading from cookbook_path: /root/chef_cookbooks
+Converging 4 resources
+[2015-09-23T11:22:37+00:00] DEBUG: Converging node Chef
+Recipe: jboss::deploy
+  * remote_file[/opt/testweb.zip] action create[2015-09-23T11:22:37+00:00] INFO: Processing remote_file[/opt/testweb.zip] action create (jboss::deploy line 13)
+[2015-09-23T11:22:37+00:00] DEBUG: remote_file[/opt/testweb.zip] checking for changes
+[2015-09-23T11:22:37+00:00] DEBUG: Cache control headers: {}
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_request
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_request
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_request
+[2015-09-23T11:22:37+00:00] DEBUG: Initiating GET to http://www.cumulogic.com/download/Apps/testweb.zip
+[2015-09-23T11:22:37+00:00] DEBUG: ---- HTTP Request Header Data: ----
+[2015-09-23T11:22:37+00:00] DEBUG: Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+[2015-09-23T11:22:37+00:00] DEBUG: ---- End HTTP Request Header Data ----
+[2015-09-23T11:22:37+00:00] DEBUG: ---- HTTP Status and Header Data: ----
+[2015-09-23T11:22:37+00:00] DEBUG: HTTP 1.1 200 OK
+[2015-09-23T11:22:37+00:00] DEBUG: date: Wed, 23 Sep 2015 11:15:11 GMT
+[2015-09-23T11:22:37+00:00] DEBUG: server: Apache
+[2015-09-23T11:22:37+00:00] DEBUG: last-modified: Thu, 16 Jan 2014 23:23:42 GMT
+[2015-09-23T11:22:37+00:00] DEBUG: etag: "100020-6c6-4f01eb75b7ed7"
+[2015-09-23T11:22:37+00:00] DEBUG: accept-ranges: bytes
+[2015-09-23T11:22:37+00:00] DEBUG: cache-control: max-age=0
+[2015-09-23T11:22:37+00:00] DEBUG: expires: Wed, 23 Sep 2015 11:15:11 GMT
+[2015-09-23T11:22:37+00:00] DEBUG: vary: Accept-Encoding
+[2015-09-23T11:22:37+00:00] DEBUG: content-encoding: gzip
+[2015-09-23T11:22:37+00:00] DEBUG: content-length: 1685
+[2015-09-23T11:22:37+00:00] DEBUG: connection: close
+[2015-09-23T11:22:37+00:00] DEBUG: content-type: application/zip
+[2015-09-23T11:22:37+00:00] DEBUG: ---- End HTTP Status/Header Data ----
+[2015-09-23T11:22:37+00:00] DEBUG: Streaming download from http://www.cumulogic.com/download/Apps/testweb.zip to tempfile /tmp/chef-rest20150923-21637-razsxt
+[2015-09-23T11:22:37+00:00] DEBUG: Initializing gzip stream deflator
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::ValidateContentLength::ContentLengthCounter#handle_chunk
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP::StreamHandler calling Chef::HTTP::Decompressor::GzipInflater#handle_chunk
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::ValidateContentLength#handle_stream_complete
+[2015-09-23T11:22:37+00:00] DEBUG: Content-Length validated correctly.
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::CookieManager#handle_stream_complete
+[2015-09-23T11:22:37+00:00] DEBUG: Chef::HTTP calling Chef::HTTP::Decompressor#handle_stream_complete
+[2015-09-23T11:22:37+00:00] DEBUG: touching /opt/testweb.zip to create it
+[2015-09-23T11:22:37+00:00] INFO: remote_file[/opt/testweb.zip] created file /opt/testweb.zip
+
+    - create new file /opt/testweb.zip[2015-09-23T11:22:37+00:00] DEBUG: calculating checksum of /tmp/chef-rest20150923-21637-razsxt to compare with
+[2015-09-23T11:22:37+00:00] DEBUG: reading modes from /opt/testweb.zip file
+[2015-09-23T11:22:37+00:00] DEBUG: applying mode = 644, uid = 0, gid = 0 to /tmp/chef-rest20150923-21637-razsxt
+[2015-09-23T11:22:37+00:00] DEBUG: moving temporary file /tmp/chef-rest20150923-21637-razsxt into place at /opt/testweb.zip
+[2015-09-23T11:22:37+00:00] INFO: remote_file[/opt/testweb.zip] updated file contents /opt/testweb.zip
+
+    - update content in file /opt/testweb.zip from none to 596c0b
+    (new content is binary, diff output suppressed)[2015-09-23T11:22:37+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T11:22:37+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T11:22:37+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T11:22:37+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T11:22:37+00:00] DEBUG: found current_uid == nil, so we are creating a new file, updating owner
+[2015-09-23T11:22:37+00:00] INFO: remote_file[/opt/testweb.zip] owner changed to 0
+[2015-09-23T11:22:37+00:00] DEBUG: found current_gid == nil, so we are creating a new file, updating group
+[2015-09-23T11:22:37+00:00] INFO: remote_file[/opt/testweb.zip] group changed to 0
+[2015-09-23T11:22:37+00:00] DEBUG: found current_mode == nil, so we are creating a new file, updating mode
+[2015-09-23T11:22:37+00:00] INFO: remote_file[/opt/testweb.zip] mode changed to 644
+
+    - change mode from '' to '0644'
+    - change owner from '' to 'root'
+    - change group from '' to 'root'[2015-09-23T11:22:37+00:00] DEBUG: selinux utilities can not be found. Skipping selinux permission fixup.
+
+  * execute[unzip-testweb.zip] action run[2015-09-23T11:22:37+00:00] INFO: Processing execute[unzip-testweb.zip] action run (jboss::deploy line 20)
+[2015-09-23T11:22:37+00:00] DEBUG: Providers for generic execute resource enabled on node include: [Chef::Provider::Execute]
+[2015-09-23T11:22:37+00:00] DEBUG: Provider for action run on resource execute[unzip-testweb.zip] is Chef::Provider::Execute
+Archive:  testweb.zip
+  inflating: /opt/jboss-as-7.1.1.Final/standalone/deployments/testweb/testweb.war
+  inflating: /opt/jboss-as-7.1.1.Final/standalone/deployments/testweb/testweb.xml
+[2015-09-23T11:22:37+00:00] INFO: execute[unzip-testweb.zip] ran successfully
+
+    - execute unzip testweb.zip -d /opt/jboss-as-7.1.1.Final/standalone/deployments/
+  * service[jbossas7] action stop[2015-09-23T11:22:37+00:00] INFO: Processing service[jbossas7] action stop (jboss::deploy line 25)
+[2015-09-23T11:22:37+00:00] DEBUG: Providers for generic service resource enabled on node include: [Chef::Provider::Service::Redhat, Chef::Provider::Service::Init]
+[2015-09-23T11:22:37+00:00] DEBUG: Provider for action stop on resource service[jbossas7] is Chef::Provider::Service::Redhat
+[2015-09-23T11:22:37+00:00] DEBUG: service[jbossas7] supports status, running
+Usage: /etc/init.d/jboss {start|stop|log}
+jbossas7        0:off   1:off   2:on    3:on    4:on    5:on    6:off
+[2015-09-23T11:22:37+00:00] DEBUG: service[jbossas7] already stopped - nothing to do
+ (up to date)
+  * service[jbossas7] action start[2015-09-23T11:22:37+00:00] INFO: Processing service[jbossas7] action start (jboss::deploy line 29)
+[2015-09-23T11:22:37+00:00] DEBUG: Providers for generic service resource enabled on node include: [Chef::Provider::Service::Redhat, Chef::Provider::Service::Init]
+[2015-09-23T11:22:37+00:00] DEBUG: Provider for action start on resource service[jbossas7] is Chef::Provider::Service::Redhat
+[2015-09-23T11:22:37+00:00] DEBUG: service[jbossas7] supports status, running
+Usage: /etc/init.d/jboss {start|stop|log}
+jbossas7        0:off   1:off   2:on    3:on    4:on    5:on    6:off
+Starting JBoss AS7.
+sh: /opt/jbossas7//bin/standalone.sh: No such file or directory
+[2015-09-23T11:22:37+00:00] INFO: service[jbossas7] started
+
+    - start service service[jbossas7]
+[2015-09-23T11:22:37+00:00] INFO: Chef Run complete in 0.581564933 seconds
+[2015-09-23T11:22:37+00:00] INFO: Skipping removal of unused files from the cache
+
+Running handlers:
+[2015-09-23T11:22:37+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-23T11:22:37+00:00] INFO: Report handlers complete
+Chef Client finished, 3/4 resources updated in 2.595377694 seconds
+[2015-09-23T11:22:37+00:00] DEBUG: Forked instance successfully reaped (pid: 21637)
+[2015-09-23T11:22:37+00:00] DEBUG: Exiting
